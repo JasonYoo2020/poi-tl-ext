@@ -24,14 +24,14 @@ def getBranchName() {
         commandLine("git", "branch", "--show-current")
     }.standardOutput.asText.get().trim()
 }
-
+/*
 ext {
     VERSION_NAME = 'poi-5' == getBranchName()? "${project.V}-poi5" : project.V
 }
 
 group = GROUP
 version = VERSION_NAME
-
+*/
 repositories {
     mavenLocal()
     jcenter()
@@ -87,7 +87,7 @@ java {
     withSourcesJar()
     withJavadocJar()
 }
-
+/*
 publishing {
     publications {
         maven(MavenPublication) {
@@ -125,3 +125,4 @@ publishing {
 signing {
     sign publishing.publications.maven
 }
+*/
